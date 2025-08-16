@@ -1,5 +1,6 @@
 /* General card */
 .progress-card {
+    font-family: 'Inter', sans-serif;
     width: 70vw;
     background: #567877; /* verde grisáceo del mock */
     border-radius: 16px;
@@ -19,10 +20,6 @@
 /* === VERSIÓN 1 (CIRCULAR) === */
 .progress-circle {
     position: relative;
-}
-
-.percent {
-    font: 700 28px/1 system-ui, sans-serif;
 }
 
 /* === VERSIÓN 2 (LINEAL) === */
