@@ -1,0 +1,36 @@
+
+
+/* Opcional: responsivo pequeño */
+@media (max-width: 400px) {
+    .percent { font-size: 24px; }
+}
+.progress-card {
+    width: 70vw;
+    background: #4c6e6a; /* verde grisáceo del mock */
+    border-radius: 16px;
+    padding: 20px 18px;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 0 rgba(0,0,0,.1) inset;
+}
+
+.progress-circle {
+    position: relative;
+}
+
+.percent {
+    font: 700 28px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.progress-label {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Opcional: responsivo pequeño */
+@media (max-width: 400px) {
+    .percent { font-size: 24px; }
+}
