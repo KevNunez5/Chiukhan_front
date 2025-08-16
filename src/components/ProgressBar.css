@@ -1,26 +1,12 @@
-
-
-/* Opcional: responsivo pequeño */
-@media (max-width: 400px) {
-    .percent { font-size: 24px; }
-}
+/* General card */
 .progress-card {
     width: 70vw;
-    background: #4c6e6a; /* verde grisáceo del mock */
+    background: #567877; /* verde grisáceo del mock */
     border-radius: 16px;
-    padding: 20px 18px;
+    padding: 16px;
     display: grid;
     place-items: center;
     gap: 10px;
-    box-shadow: 0 2px 0 rgba(0,0,0,.1) inset;
-}
-
-.progress-circle {
-    position: relative;
-}
-
-.percent {
-    font: 700 28px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .progress-label {
@@ -30,7 +16,39 @@
     line-height: 1.2;
 }
 
-/* Opcional: responsivo pequeño */
-@media (max-width: 400px) {
-    .percent { font-size: 24px; }
+/* === VERSIÓN 1 (CIRCULAR) === */
+.progress-circle {
+    position: relative;
+}
+
+.percent {
+    font: 700 28px/1 system-ui, sans-serif;
+}
+
+/* === VERSIÓN 2 (LINEAL) === */
+.progress-card.linear {
+    width: 70vw;
+    max-width: 400px;
+}
+
+.progress-text {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.progress-track {
+    width: 100%;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 16px;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
 }

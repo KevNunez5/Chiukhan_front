@@ -7,7 +7,9 @@ function App() {
   return (
     <>
         <div>
-            <ProgressBar value={50} />
+            <ProgressBar value={75} version={2} />
+            <div>Ola</div>
+            <ProgressBar value={25} version={1} />
         </div>
     </>
   )
