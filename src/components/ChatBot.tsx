@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ChatBot.css"; // import the CSS file
+import "./ChatBot.css";
 
 const ChatBox: React.FC = () => {
   const [focused, setFocused] = useState(false);
