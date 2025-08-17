@@ -1,13 +1,25 @@
+import { useState } from "react";
 import "./Quiz.css";
 import NoNext from "../../components/NoNext";
 import ChatBot from "../../components/ChatBot";
 import QuizButton from "../../components/QuizButton";
+import SubmitButton from "../../components/SubmitButton";
 import cursos from "../../assets/data/cursos2.json";
 
 export default function QuizMexicanIndependence() {
     const curso = cursos[1]; // "Historia"
-    const tema = curso.temas[1]; // "Independencia Mexicana"
+    const tema = curso.temas[0]; // "Independencia Mexicana"
     const quiz = curso.quiz;
+
+    const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
+        Array(quiz.preguntas.length).fill(null)
+    );
+
+    const handleSelectOption = (questionIndex: number, optionIndex: number) => {
+        const newAnswers = [...userAnswers];
+        newAnswers[questionIndex] = optionIndex;
+        setUserAnswers(newAnswers);
+    };
 
     return (
         <div className="quiz-section">
@@ -17,17 +29,24 @@ export default function QuizMexicanIndependence() {
             />
 
             <div className="quiz-questions">
-                {quiz.preguntas.map((pregunta, index) => (
-                    <div key={index} className="quiz-question">
+                {quiz.preguntas.map((pregunta, qIndex) => (
+                    <div key={qIndex} className="quiz-question">
                         <h3>{pregunta.pregunta}</h3>
                         <div className="quiz-options">
-                            {pregunta.opciones.map((opcion, i) => (
-                                <QuizButton key={i} nombre={opcion} value={false} />
+                            {pregunta.opciones.map((opcion, oIndex) => (
+                                <QuizButton
+                                    key={oIndex}
+                                    nombre={opcion}
+                                    value={userAnswers[qIndex] === oIndex}
+                                    onClick={() => handleSelectOption(qIndex, oIndex)}
+                                />
                             ))}
                         </div>
                     </div>
                 ))}
             </div>
+
+            <SubmitButton quiz={quiz} userAnswers={userAnswers} />
 
             <div className="chat-section">
                 <ChatBot />

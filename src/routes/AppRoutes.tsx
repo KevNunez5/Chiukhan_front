@@ -1,13 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import Welcome from "../pages/Welcome/Welcome";
 import BasicAlgebra from "../pages/Topics/BasicAlgebra";
-import Geometry from "../pages/Topics/Geometry"
-import MexicanIndependence from "../pages/Topics/MexicoIndependence"
-import MexicanRevolution from "../pages/Topics/MexicanRevolution"
+import Geometry from "../pages/Topics/Geometry";
+import MexicanIndependence from "../pages/Topics/MexicoIndependence";
+import MexicanRevolution from "../pages/Topics/MexicanRevolution";
+import CellsFunctions from "../pages/Topics/CellsFunctions";
+import ADN from "../pages/Topics/ADN";
 import QuizBasicAlgebra from "../pages/Quizzes/QuizBasicAlgebra";
 import QuizGeometry from "../pages/Quizzes/QuizGeometry";
 import QuizMexicanRevolution from "../pages/Quizzes/QuizMexicanRevolution";
 import QuizMexicanIndependence from "../pages/Quizzes/QuizMexicanIndependence";
+import QuizCellsFunctions from "../pages/Quizzes/QuizCellsFunctions";
+import QuizADN from "../pages/Quizzes/QuizADN";
 
 export default function AppRoutes() {
     return (
@@ -22,6 +26,10 @@ export default function AppRoutes() {
             <Route path="/mexicanindependence/quiz" element={<QuizMexicanIndependence />} />
             <Route path="/mexicanrevolution" element={<MexicanRevolution />} />
             <Route path="/mexicanrevolution/quiz" element={<QuizMexicanRevolution />} />
+            <Route path="/cellsfunctions" element={<CellsFunctions />} />
+            <Route path="/cellsfunctions/quiz" element={<QuizCellsFunctions />} />
+            <Route path="/adn" element={<ADN />} />
+            <Route path="/adn/quiz" element={<QuizADN />} />
         </Routes>
     );
 }

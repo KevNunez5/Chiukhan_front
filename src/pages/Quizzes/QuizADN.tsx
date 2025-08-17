@@ -6,9 +6,9 @@ import QuizButton from "../../components/QuizButton";
 import SubmitButton from "../../components/SubmitButton";
 import cursos from "../../assets/data/cursos2.json";
 
-export default function QuizBasicAlgebra() {
-    const curso = cursos[0]; // "Matemáticas"
-    const tema = curso.temas[0]; // "Álgebra básica"
+export default function QuizADN() {
+    const curso = cursos[2]; // "Biología"
+    const tema = curso.temas[1]; // "Genética básica: ADN y herencia"
     const quiz = curso.quiz;
 
     const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
