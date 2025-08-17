@@ -25,7 +25,7 @@ const ChatBox: React.FC = () => {
     } catch (err) {
         console.error("Error sending message:", err);
     } finally {
-        console.log("Sent"); // This will run no matter what
+        console.log("Sent");
     }
     };
 

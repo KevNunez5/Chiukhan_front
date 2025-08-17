@@ -8,7 +8,7 @@ export default function TopicSample() {
     const tema = curso.temas[0]; 
     
     return (
-        <div className="max-width">
+        <div className="topic-section">
             <TopicNavigator 
                 text={tema.titulo} 
                 prevUrl="https://www.youtube.com" 
@@ -17,7 +17,9 @@ export default function TopicSample() {
             <div className="topic-content">
                 <p>{tema.contenido}</p>
             </div>
-            <ChatBot />
+            <div className="chat-section">
+                <ChatBot />
+            </div>
         </div>
     );
 }
