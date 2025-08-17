@@ -1,13 +1,19 @@
 import { Routes, Route } from "react-router-dom";
 import Welcome from "../pages/Welcome/Welcome";
-import TopicSample from "../pages/Topics/TopicSample";
+import BasicAlgebra from "../pages/Topics/BasicAlgebra";
+import Geometry from "../pages/Topics/Geometry"
+import MexicanIndependence from "../pages/Topics/MexicoIndependence"
+import MexicanRevolution from "../pages/Topics/MexicanRevolution"
 
 export default function AppRoutes() {
     return (
         <Routes>
             {/* Página inicial */}
             <Route path="/" element={<Welcome />} />
-            <Route path="/topicsample" element={<TopicSample />} />
+            <Route path="/basicalgebra" element={<BasicAlgebra />} />
+            <Route path="/geometry" element={<Geometry />} />
+            <Route path="/mexicanindependence" element={<MexicanIndependence />} />
+            <Route path="/mexicanrevolution" element={<MexicanRevolution />} />
         </Routes>
     );
 }

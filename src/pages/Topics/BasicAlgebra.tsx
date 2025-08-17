@@ -1,9 +1,9 @@
-import "./TopicSample.css";
+import "./Topics.css";
 import TopicNavigator from "../../components/TopicsNavigation";
 import ChatBot from "../../components/ChatBot"
 import cursos from "../../assets/data/cursos2.json";
 
-export default function TopicSample() {
+export default function BasicAlgebra() {
     const curso = cursos[0]; 
     const tema = curso.temas[0]; 
     
