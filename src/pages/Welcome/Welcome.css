@@ -4,10 +4,9 @@
   font-size: 3.3vw;
   font-weight: bold;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
-  background: #f5f5f5;
+  background: #06382E;
   color: #F1F3FA;
   text-align: center;
   align-items: center;
@@ -24,29 +23,21 @@
   bottom: 10vh;
 }
 
-.welcome-content h1 {
+.welcome-content h1{
   width: 70vw;
 }
 
-.start-button {
+
+.start-button{
   width: 60vw;
   font-size: 7vw;
   font-weight: bold;
-  background: #00B1D3;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 32px;
-  cursor: pointer;
-  transition: background 0.2s;
+  background-color: #00B1D3;
+  color: #F1F3FA;
 }
 
-.start-button:hover {
-  background: #1565c0;
-}
-
-.spacer {
-  height: 24px;
+.spacer{
+  height: 10vh;
 }
 
 .logo-icon{

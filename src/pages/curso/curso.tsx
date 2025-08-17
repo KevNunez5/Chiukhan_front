@@ -1,6 +1,7 @@
 import "./curso.css"
 import BlueButton from "../../components/BlueButton"
 import ProgressBar from "../../components/ProgressBar"
+import ChatBot from "../../components/ChatBot.tsx";
 
 
 type CourseItem = { nombre: string; url?: string }
@@ -17,7 +18,7 @@ const DEFAULT_COURSES: CourseItem[] = [
     { nombre: "Curso 3", url: "#" },
 ]
 
-export default function Start({
+export default function Curso({
                                   courses = DEFAULT_COURSES,
                                   courseName = "",
                                   progress = 75,
@@ -42,6 +43,7 @@ export default function Start({
             </div>
 
             {/* Chat abajo */}
+            <ChatBot></ChatBot>
 
         </div>
     )
