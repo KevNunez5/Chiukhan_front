@@ -3,11 +3,12 @@ import Welcome from "../pages/Welcome/Welcome";
 import Start from "../pages/Start/Start.tsx";
 
 export default function AppRoutes() {
+
     return (
         <Routes>
             {/* Página inicial */}
             <Route path="/" element={<Welcome />} />
-            <Route path="/start" element={<Start/>} />
+            <Route path="/start" element={<Start progress={95} />}></Route>
         </Routes>
     );
 }
