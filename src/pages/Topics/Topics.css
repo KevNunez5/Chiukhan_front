@@ -14,6 +14,7 @@
 }
 
 .topic-content{
+  height: 150vw;
   color: #d9d9d9;
   text-align: justify;
   padding-left: 50px;
@@ -23,4 +24,5 @@
   font-size: 18px;
   background-color: #063826;
   white-space: pre-wrap;
+  overflow-y: auto;
 }
