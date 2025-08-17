@@ -1,53 +1,37 @@
 .welcome-container {
+  width: 100vw;
+  font-family: 'Inter', sans-serif;
+  font-size: 3.3vw;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
+  background: #06382E;
+  color: #F1F3FA;
   text-align: center;
 }
 
-.welcome-header {
-  margin-top: 80px;
-  padding: 20px;
-}
-
-.welcome-title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.welcome-subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.welcome-main {
-  flex: 1;
+.welcome-content{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: left;
   align-items: center;
+  align-content: center;
 }
 
-.welcome-button {
-  background-color: #fff;
-  color: #2575fc;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-size: 1.1rem;
+.welcome-content h1{
+  width: 70vw;
+}
+
+
+.start-button{
+  width: 60vw;
+  font-size: 7vw;
   font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+  background-color: #00B1D3;
+  color: #F1F3FA;
 }
 
-.welcome-button:hover {
-  background-color: #f0f0f0;
-}
-
-.welcome-footer {
-  padding: 20px;
-  font-size: 0.9rem;
-  opacity: 0.8;
+.spacer{
+  height: 10vh;
 }
