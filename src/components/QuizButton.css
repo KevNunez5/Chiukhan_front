@@ -1,0 +1,21 @@
+.quiz-button {
+  width: 80%;
+  align-self: center;
+  padding: 15px 70px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inter, sans-serif;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.quiz-button:hover {
+  background-color: #baf7fc;
+  color: #000000;
+}
