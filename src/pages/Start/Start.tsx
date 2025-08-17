@@ -1,32 +1,48 @@
-
 import "./Start.css"
-import BlueButton from "../../components/BlueButton.tsx";
-import ProgressBar from "../../components/ProgressBar.tsx";
-import ChatBot from "../../components/ChatBot.tsx";
-// Importa tus componentes reales cuando los tengas listos
-// import ProgressBar from "../../components/ProgressBar/ProgressBar"
-// import Chat from "../../components/Chat/Chat"
+import BlueButton from "../../components/BlueButton"
+import ProgressBar from "../../components/ProgressBar"
+import ChatBot from "../../components/ChatBot"
 
-export default function Start() {
+type CourseItem = { nombre: string; url?: string }
+
+type StartProps = {
+    courses?: CourseItem[]       // ← lista que te mandan
+    userName?: string            // opcional para saludo
+    progress?: number            // opcional para la barra
+}
+
+const DEFAULT_COURSES: CourseItem[] = [
+    { nombre: "Curso 1", url: "#" },
+    { nombre: "Curso 2", url: "#" },
+    { nombre: "Curso 3", url: "#" },
+]
+
+export default function Start({
+                                  courses = DEFAULT_COURSES,
+                                  userName = "",
+                                  progress = 75,
+                              }: StartProps) {
     return (
         <div className="start-container">
             {/* Saludo */}
-            <h2 className="welcome-text">Bienvenid@!</h2>
+            <h2 className="welcome-text">
+                Bienvenid@{userName ? ` ${userName}` : ""}!
+            </h2>
 
             {/* Progreso general */}
             <div className="progress-section">
-                <ProgressBar value={75} version={1} />
+                <ProgressBar value={progress} version={1} />
             </div>
 
-            {/* Botones de cursos */}
-            <div className="courses-section">
-                <BlueButton nombre="Curso 1" url="https://udemy.com/curso1" />
-                <BlueButton nombre="Curso 1" url="https://udemy.com/curso1" />
-                <BlueButton nombre="Curso 1" url="https://udemy.com/curso1" />
+            {/* Botones de cursos (scrolleable) */}
+            <div className="courses-section" aria-label="Lista de cursos">
+                {courses.map((c, i) => (
+                    <BlueButton key={`${c.nombre}-${i}`} nombre={c.nombre} url={c.url ?? "#"} />
+                ))}
             </div>
 
-            <ChatBot></ChatBot>
-
+            {/* Chat abajo */}
+            <ChatBot />
         </div>
     )
 }
