@@ -14,6 +14,9 @@ import QuizMexicanIndependence from "../pages/Quizzes/QuizMexicanIndependence";
 import QuizCellsFunctions from "../pages/Quizzes/QuizCellsFunctions";
 import QuizADN from "../pages/Quizzes/QuizADN";
 import Analysis from "../pages/Quizzes/Analysis";
+import MathCourse from "../pages/Courses/MathCourse.tsx"
+import BiologyCourse from "../pages/Courses/BiologyCourse.tsx";
+import HistoryCourse from "../pages/Courses/HistoryCourse.tsx";
 
 export default function AppRoutes() {
 
@@ -35,6 +38,9 @@ export default function AppRoutes() {
             <Route path="/adn" element={<ADN />} />
             <Route path="/adn/quiz" element={<QuizADN />} />
             <Route path="/analysis" element={<Analysis />} />
+            <Route path="/mathcourse" element={<MathCourse />} />
+            <Route path="/biologycourse" element={<BiologyCourse />} />
+            <Route path="/historycourse" element={ <HistoryCourse />} />
         </Routes>
     );
 }

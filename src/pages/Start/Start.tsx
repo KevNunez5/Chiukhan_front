@@ -12,9 +12,9 @@ type StartProps = {
 }
 
 const DEFAULT_COURSES: CourseItem[] = [
-    { nombre: "Curso 1", url: "#" },
-    { nombre: "Curso 2", url: "#" },
-    { nombre: "Curso 3", url: "#" },
+    { nombre: "Curso de Biología", url: "/biologycourse" },
+    { nombre: "Curso de Matemáticas", url: "/mathcourse" },
+    { nombre: "Curso de Historia", url: "/historycourse" },
 ]
 
 export default function Start({
