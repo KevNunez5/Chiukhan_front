@@ -16,7 +16,7 @@ const TopicNavigator: React.FC<TopicNavigatorProps> = ({ text, prevUrl, nextUrl 
         <img src={prevTopicImg} alt="Previous topic" className="nav-button" />
       </a>
 
-      <span className="topic-text">{text}</span>
+      <span className="topic-title">{text}</span>
 
       <a href={nextUrl}>
         <img src={nextTopicImg} alt="Next topic" className="nav-button" />

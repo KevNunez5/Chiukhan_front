@@ -1,8 +1,24 @@
 .max-width {
-  width: 97vw;
+  width: 100vw;
   margin: 0;
   padding: 0;
-  border: 1px solid black;
   box-sizing: border-box;
+  justify-self: top;
+  padding-right: 5%;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #063826;
 }
 
+.topic-content{
+    color: #d9d9d9;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 30px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+}
