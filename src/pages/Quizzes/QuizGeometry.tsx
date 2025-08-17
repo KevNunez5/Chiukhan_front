@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Quiz.css";
 import NoNext from "../../components/NoNext";
+import TopicNavigator from "../../components/TopicsNavigation";
 import ChatBot from "../../components/ChatBot";
 import QuizButton from "../../components/QuizButton";
 import SubmitButton from "../../components/SubmitButton";
@@ -10,6 +12,17 @@ export default function QuizGeometry() {
     const curso = cursos[0]; // "Matemáticas"
     const tema = curso.temas[1]; // "Geometría"
     const quiz = curso.quiz;
+
+    const [quizPassed, setQuizPassed] = useState(false);
+
+    const navigate = useNavigate();
+    const handleResult = (passed: boolean) => {
+        if (passed) {
+            setQuizPassed(true); // Permitir avanzar
+        } else {
+            navigate("/analysis"); // Redirigir a página de análisis
+        }
+    };
 
     const [userAnswers, setUserAnswers] = useState<(number | null)[]>(
         Array(quiz.preguntas.length).fill(null)
@@ -23,10 +36,18 @@ export default function QuizGeometry() {
 
     return (
         <div className="quiz-section">
+            {quizPassed ? (
+            <TopicNavigator 
+                text={`Quiz de ${tema.titulo}`} 
+                prevUrl="https://www.youtube.com" 
+                nextUrl="https://www.canva.com/"
+            />
+        ) : (
             <NoNext 
-                text={`Quiz de ${tema.titulo}`}
+                text={`Quiz de ${tema.titulo}`} 
                 prevUrl="https://www.youtube.com" 
             />
+        )}
 
             <div className="quiz-questions">
                 {quiz.preguntas.map((pregunta, qIndex) => (
@@ -46,7 +67,11 @@ export default function QuizGeometry() {
                 ))}
             </div>
 
-            <SubmitButton quiz={quiz} userAnswers={userAnswers} />
+            <SubmitButton 
+                quiz={quiz} 
+                userAnswers={userAnswers} 
+                onResult={handleResult} 
+            />
 
             <div className="chat-section">
                 <ChatBot />

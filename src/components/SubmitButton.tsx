@@ -2,34 +2,28 @@ import React from "react";
 import "./SubmitButton.css";
 
 interface SubmitButtonProps {
-    quiz: {
-        preguntas: {
-            pregunta: string;
-            opciones: string[];
-            respuestaCorrecta: number;
-        }[];
-    };
-    userAnswers: (number | null)[];
+  quiz: any;
+  userAnswers: (number | null)[];
+  onResult: (passed: boolean) => void;
 }
 
-const SubmitButton: React.FC<SubmitButtonProps> = ({ quiz, userAnswers }) => {
-    const handleSubmit = () => {
-        quiz.preguntas.forEach((pregunta, index) => {
-            const selected = userAnswers[index];
-            const correct = pregunta.respuestaCorrecta;
-            console.log(`Pregunta: ${pregunta.pregunta}`);
-            console.log(`Tu respuesta: ${selected !== null ? pregunta.opciones[selected] : "No respondida"}`);
-            console.log(`Respuesta correcta: ${pregunta.opciones[correct]}`);
-            console.log(selected === correct ? "✅ Correcta" : "❌ Incorrecta");
-            console.log("--------------");
-        });
-    };
+const SubmitButton: React.FC<SubmitButtonProps> = ({ quiz, userAnswers, onResult }) => {
+  const handleSubmit = () => {
+    let allCorrect = true;
+    quiz.preguntas.forEach((pregunta: any, index: number) => {
+      if (userAnswers[index] !== pregunta.respuestaCorrecta) {
+        allCorrect = false;
+      }
+    });
 
-    return (
-        <button className="submit-button" onClick={handleSubmit}>
-            Enviar respuestas
-        </button>
-    );
+    onResult(allCorrect);
+  };
+
+  return (
+    <button className="submit-button" onClick={handleSubmit}>
+      Enviar
+    </button>
+  );
 };
 
 export default SubmitButton;
