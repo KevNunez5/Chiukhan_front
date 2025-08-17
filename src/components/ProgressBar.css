@@ -10,6 +10,11 @@
     gap: 10px;
 }
 
+.percent{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
 .progress-label {
     margin: 0;
     text-align: center;

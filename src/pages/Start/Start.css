@@ -1,0 +1,62 @@
+.start-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    background-color: #043c34; /* tu color de fondo */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+}
+
+.welcome-text {
+    font-family: 'Inknut Antiqua', serif;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.progress-section {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.courses-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 250px;
+    margin: 1rem 0;
+}
+
+.course-btn {
+    background-color: #00bfff;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.course-btn:hover {
+    background-color: #009acd;
+}
+
+.chat-section {
+    margin-top: auto; /* se va hasta abajo */
+    width: 100%;
+    padding: 0.5rem;
+    background: #fff;
+    color: #000;
+    border-top: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+}
+
+.chat-placeholder {
+    font-size: 0.9rem;
+    color: #333;
+}
