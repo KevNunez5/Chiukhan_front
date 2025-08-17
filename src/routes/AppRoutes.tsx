@@ -5,6 +5,9 @@ import Geometry from "../pages/Topics/Geometry"
 import MexicanIndependence from "../pages/Topics/MexicoIndependence"
 import MexicanRevolution from "../pages/Topics/MexicanRevolution"
 import QuizBasicAlgebra from "../pages/Quizzes/QuizBasicAlgebra";
+import QuizGeometry from "../pages/Quizzes/QuizGeometry";
+import QuizMexicanRevolution from "../pages/Quizzes/QuizMexicanRevolution";
+import QuizMexicanIndependence from "../pages/Quizzes/QuizMexicanIndependence";
 
 export default function AppRoutes() {
     return (
@@ -14,8 +17,11 @@ export default function AppRoutes() {
             <Route path="/basicalgebra" element={<BasicAlgebra />} />
             <Route path="/basicalgebra/quiz" element={<QuizBasicAlgebra />} />
             <Route path="/geometry" element={<Geometry />} />
+            <Route path="/geometry/quiz" element={<QuizGeometry />} />
             <Route path="/mexicanindependence" element={<MexicanIndependence />} />
+            <Route path="/mexicanindependence/quiz" element={<QuizMexicanIndependence />} />
             <Route path="/mexicanrevolution" element={<MexicanRevolution />} />
+            <Route path="/mexicanrevolution/quiz" element={<QuizMexicanRevolution />} />
         </Routes>
     );
 }

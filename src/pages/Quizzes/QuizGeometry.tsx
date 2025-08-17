@@ -4,9 +4,9 @@ import ChatBot from "../../components/ChatBot";
 import QuizButton from "../../components/QuizButton";
 import cursos from "../../assets/data/cursos2.json";
 
-export default function QuizBasicAlgebra() {
+export default function QuizGeometry() {
     const curso = cursos[0]; // "Matemáticas"
-    const tema = curso.temas[0]; // "Álgebra básica"
+    const tema = curso.temas[1]; // "Geometría"
     const quiz = curso.quiz;
 
     return (
