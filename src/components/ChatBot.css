@@ -9,12 +9,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 7rem;
+  height: 10rem;
   transition: all 0.3s ease-in-out;
 }
 
 .chat-box.focused {
-  height: 18rem;
+  height: 14rem;
 }
 
 .chat-label {
@@ -23,12 +23,57 @@
   margin-bottom: 0.5rem;
 }
 
+.chat-input-wrapper {
+  position: relative;
+  width: 90%;
+  align-self: flex-end;
+}
+
 .chat-input {
-  width: 65%;
+  width: 75%;
+  height: fit-content;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   background-color: #D9D9D9;
-  padding: 0.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
   outline: none;
+  resize: none;
+  overflow-y: auto;
+}
+
+.chat-send {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
   align-self: flex-end;
+  transition: background 0.2s;
+}
+
+.chat-send-icon {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.chat-send-icon:focus {
+  outline: none;
+}
+
+.chat-send-icon img {
+  width: 20px;
+  height: 20px;
+  padding-right: 2px;
+}
+
+.chat-send-icon:active img {
+  transform: scale(1.2);
 }
