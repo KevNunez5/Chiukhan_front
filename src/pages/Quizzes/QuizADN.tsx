@@ -21,7 +21,7 @@ export default function QuizADN() {
         if (passed) {
             setQuizPassed(true); // Permitir avanzar
         } else {
-            navigate("/analysis"); // Redirigir a la página de análisis
+            navigate("/analysis", { state: { quiz, userAnswers, tema } });  // Redirigir a la página de análisis
         }
     }
 

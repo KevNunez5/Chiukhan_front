@@ -20,8 +20,7 @@ export default function QuizCellsFunctions() {
     const handleResult = (passed: boolean) => {
         if (passed) {
             setQuizPassed(true); // Permitir avanzar
-        } else {
-            navigate("/analysis"); // Redirigir a página de análisis
+        } else {navigate("/analysis", { state: { quiz, userAnswers, tema } }); // Redirigir a página de análisis
         }
     };
 

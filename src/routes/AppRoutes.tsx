@@ -12,6 +12,7 @@ import QuizMexicanRevolution from "../pages/Quizzes/QuizMexicanRevolution";
 import QuizMexicanIndependence from "../pages/Quizzes/QuizMexicanIndependence";
 import QuizCellsFunctions from "../pages/Quizzes/QuizCellsFunctions";
 import QuizADN from "../pages/Quizzes/QuizADN";
+import Analysis from "../pages/Quizzes/Analysis";
 
 export default function AppRoutes() {
     return (
@@ -30,6 +31,7 @@ export default function AppRoutes() {
             <Route path="/cellsfunctions/quiz" element={<QuizCellsFunctions />} />
             <Route path="/adn" element={<ADN />} />
             <Route path="/adn/quiz" element={<QuizADN />} />
+            <Route path="/analysis" element={<Analysis />} />
         </Routes>
     );
 }

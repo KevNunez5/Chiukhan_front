@@ -21,7 +21,7 @@ export default function QuizBasicAlgebra() {
         if (passed) {
             setQuizPassed(true); // Permitir avanzar
         } else {
-            navigate("/analysis"); // Redirigir a página de análisis
+            navigate("/analysis", { state: { quiz, userAnswers, tema } }); // Redirigir a página de análisis
         }
     };
 
