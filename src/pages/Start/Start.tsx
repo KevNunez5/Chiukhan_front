@@ -2,6 +2,7 @@
 import "./Start.css"
 import BlueButton from "../../components/BlueButton.tsx";
 import ProgressBar from "../../components/ProgressBar.tsx";
+import ChatBot from "../../components/ChatBot.tsx";
 // Importa tus componentes reales cuando los tengas listos
 // import ProgressBar from "../../components/ProgressBar/ProgressBar"
 // import Chat from "../../components/Chat/Chat"
@@ -23,6 +24,8 @@ export default function Start() {
                 <BlueButton nombre="Curso 1" url="https://udemy.com/curso1" />
                 <BlueButton nombre="Curso 1" url="https://udemy.com/curso1" />
             </div>
+
+            <ChatBot></ChatBot>
 
         </div>
     )
