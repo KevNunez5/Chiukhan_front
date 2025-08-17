@@ -10,7 +10,7 @@ export default function Start() {
     return (
         <div className="start-container">
             {/* Saludo */}
-            <h2 className="welcome-text">Bienvenido {"Vekin"}!</h2>
+            <h2 className="welcome-text">Bienvenid@!</h2>
 
             {/* Progreso general */}
             <div className="progress-section">
