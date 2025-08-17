@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import BlueButton from './components/BlueButton'
+import QuizButton from './components/QuizButton'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +25,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-        <BlueButton nombre="Curso3" url="curso3.com"/>
+        <QuizButton nombre="a" value={false}  />
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
