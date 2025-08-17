@@ -12,14 +12,8 @@ type StartProps = {
     progress?: number
 }
 
-const DEFAULT_COURSES: CourseItem[] = [
-  { nombre: "Curso 1", url: "#" },
-  { nombre: "Curso 2", url: "#" },
-]
 
 export default function MathCourse({
-    courses = DEFAULT_COURSES,
-    courseName = "",
     progress = 75,
 }: StartProps) {
     return (
@@ -43,7 +37,7 @@ export default function MathCourse({
                         <BlueButton
                             key={tema.titulo}
                             nombre={tema.titulo}
-                            url={`/${tema.titulo.replace(/\s+/g, "").toLowerCase()}`}
+                            url={`/${tema.url.replace(/\s+/g, "").toLowerCase()}`}
                         />
                     ))
                 }
