@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Welcome from "../pages/Welcome/Welcome";
+import Start from "../pages/Start/Start.tsx";
 import BasicAlgebra from "../pages/Topics/BasicAlgebra";
 import Geometry from "../pages/Topics/Geometry";
 import MexicanIndependence from "../pages/Topics/MexicoIndependence";
@@ -15,10 +16,12 @@ import QuizADN from "../pages/Quizzes/QuizADN";
 import Analysis from "../pages/Quizzes/Analysis";
 
 export default function AppRoutes() {
+
     return (
         <Routes>
             {/* Página inicial */}
             <Route path="/" element={<Welcome />} />
+            <Route path="/start" element={<Start progress={95} />}></Route>
             <Route path="/basicalgebra" element={<BasicAlgebra />} />
             <Route path="/basicalgebra/quiz" element={<QuizBasicAlgebra />} />
             <Route path="/geometry" element={<Geometry />} />

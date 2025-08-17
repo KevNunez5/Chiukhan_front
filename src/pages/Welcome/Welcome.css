@@ -9,14 +9,18 @@
   background: #06382E;
   color: #F1F3FA;
   text-align: center;
+  align-items: center;
+  align-content: center;
 }
 
 .welcome-content{
+  position: absolute;
   display: flex;
   flex-direction: column;
   text-align: left;
   align-items: center;
   align-content: center;
+  bottom: 10vh;
 }
 
 .welcome-content h1{
@@ -34,4 +38,9 @@
 
 .spacer{
   height: 10vh;
+}
+
+.logo-icon{
+  width: 90vw;
+  height: 90vw;
 }
